@@ -13,7 +13,7 @@ import {
 async function Home() {
   const user = await getCurrentUser();
   const [userInterviews, allInterview] = await Promise.all([
-    // getInterviewsByUserId(user?.id!),
+    getInterviewsByUserId(user?.id!),
     getLatestInterviews({ userId: user?.id! }),
   ]);
 
